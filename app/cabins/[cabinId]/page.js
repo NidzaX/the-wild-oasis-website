@@ -1,3 +1,4 @@
+import TextExpander from "@/app/_components/TextExpander";
 import { getCabin } from "@/app/_lib/data-service";
 import { getCabins } from "@/app/_lib/data-service";
 
@@ -39,7 +40,9 @@ export default async function Page({ params }) {
             Cabin {name}
           </h3>
 
-          <p className="text-lg text-primary-300 mb-10">{description}</p>
+          <p className="text-lg text-primary-300 mb-10">
+            <TextExpander>{description}</TextExpander>
+          </p>
 
           <ul className="flex flex-col gap-4 mb-7">
             <li className="flex gap-3 items-center">
